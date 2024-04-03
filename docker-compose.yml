@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  app-python:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes: 
+      - .:/app
+    restart: always
+    networks:
+        glob-net:
+          ipv4_address: 192.168.99.10
+
+  prometheus:
+    image: prom/prometheus:v2.26.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    restart: always
+    networks:
+        glob-net:
+          ipv4_address: 192.168.99.20
+
+  grafana:
+    image: grafana/grafana:7.5.2
+    ports:
+      - "3000:3000"
+    volumes:
+     - ./datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+    restart: always
+    networks:
+        glob-net:
+          ipv4_address: 192.168.99.30
+
+networks:
+  glob-net:
+    name: glob-net
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.99.0/24
