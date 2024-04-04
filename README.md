@@ -1,3 +1,8 @@
+Ce projet consiste à créer et superviser une application à l'aide de plusieurs conteneurs docker. Pour cela, nous allons utiliser :
+ - Python et flask pour l'application
+ - Prometheus pour les logs
+ - Grafana pour créer les dashboards
+
 1. Création de l’application Flask en local
 Installez Python en exécutant sudo apt update suivi de sudo apt install python3
 Installez Flask dans l'environnement virtuel avec pip install Flask
@@ -7,7 +12,6 @@ Suivez le code Flask que nous avons développé, ainsi que les dépendances néc
 Créez un Dockerfile à la racine de votre projet Flask pour construire l'image Docker. Utilisez l'image de Python comme base.
 Assurez-vous d'avoir Docker installé (vous pouvez suivre les instructions officielles de Docker)
 Vous pouvez construire votre image avec la commande docker build -t nom_image
-
 Reprenez les Dockerfile que nous avons créé pour chaque application (app-python, prometheus, grafana)
 
 3. Création du Docker Compose
@@ -25,4 +29,4 @@ Télécharger tous les fichiers.
 Tout mettre dans un dossier.
 Se placer dans le dossier.
 Lancer la commande "docker compose up".
-Vous avez votre installé le projet.
+Vous avez installé le projet.
