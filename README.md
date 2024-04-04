@@ -19,3 +19,10 @@ Exécutez docker-compose up pour construire les images et lancer les conteneurs,
 Vérifiez les logs pour vous assurer que les conteneurs ont démarré correctement.
 Testez l'application Flask en allant sur http://localhost:5000/ dans un navigateur.
 Effectuez des tests pour valider le bon fonctionnement de votre application.
+
+Si vous souhaitez accéder mettre le projet en place dans votre infrascuture, vous devez :
+Télécharger tous les fichiers.
+Tout mettre dans un dossier.
+Se placer dans le dossier.
+Lancer la commande "docker compose up".
+Vous avez votre installé le projet.
