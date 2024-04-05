@@ -24,7 +24,7 @@ Vérifiez les logs pour vous assurer que les conteneurs ont démarré correcteme
 Testez l'application Flask en allant sur http://localhost:5000/ dans un navigateur.
 Effectuez des tests pour valider le bon fonctionnement de votre application.
 
-Si vous souhaitez accéder mettre le projet en place dans votre infrascuture, vous devez :
+Si vous souhaitez accéder ou mettre le projet en place dans votre infrascuture, vous devez :
 Télécharger tous les fichiers.
 Tout mettre dans un dossier.
 Se placer dans le dossier.
